@@ -1,18 +1,17 @@
 // Developer TODO: add application entry point
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'; //need this so Reat can manipulate the DOM
 import ToDo from './App';
 import './index.css';
 
-const toDoData = {
-  unfinished: ["Take out trash", "study ReactJS", "Study Aurelia", "get slick.js working"],
-  finished: ["poop"]
-}
-
+let items = [
+  "Learn react",
+  "Get Mix-express working",
+  "Learn computer sci"
+]
 
 ReactDOM.render(
   <ToDo
-  notfinitems={toDoData.unfinished}
-  finitems={toDoData.finished} />,
-  document.getElementById('root')
+  items={items} />,
+  document.getElementById('root') //can use this multiple times to point to diff parts of the file or 1 part specifically, like a div
 );
